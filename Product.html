@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product Page</title>
+    <script src="https://kit.fontawesome.com/1e086755ed.js"crossorigin="anonymous"></script>
+        <style>
+        body{
+        background-color:black;
+        color: white;
+        overflow-x: hidden;
+        width:1440px;
+        }
+        header{
+        position:fixed;
+        top:0px;
+        height:100px;
+        width:130%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: black; 
+        }
+        .techshop{
+        text-decoration:none;
+        color:white;
+        }
+        #a{
+        position:absolute;
+        top: 36px;
+        left:1290px;
+        color:aliceblue;
+        }
+        .hov{
+        position:absolute;
+        visibility:hidden;
+        }
+        #a:hover .hov{
+        visibility: visible;
+        border: 1px solid white;
+        border-radius:4px;
+        background-color: black;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        color:white;
+        padding:5px;
+        top:26px;
+        right:-20px;
+        }
+        #b{
+        position:absolute;
+        top:35px;
+        left:1370px;
+        color: aliceblue;
+        }
+        .hov1{
+        position:absolute;
+        visibility:hidden;
+        }
+        #b:hover .hov1{
+        visibility: visible;
+        border: 1px solid white;
+        border-radius:4px;
+        background-color: black;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        color:white;
+        padding:4px;
+        top:25px;
+        right:-13px;
+        }
+        .signuphover button{
+        background-color: black;
+        border:1px solid white;
+        border-radius:5px;
+        color: aliceblue;
+        padding:5px;
+        }
+        #c{
+        position: absolute;
+        top: 35px;
+        left:1450px ;
+        color: aliceblue;
+        }
+        .signuphover{
+        position:absolute;
+        visibility:hidden;
+        transition:all 0s ease 1s;
+        border: 1px solid white;
+        background-color: black;
+        height:140px;
+        width:180px;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        color:white;
+        padding:10px;
+        top:25px;
+        right:-15px;
+        }
+        #c:hover .signuphover{
+        visibility:visible;
+        border: 1px solid white;
+        background-color: black;
+        height:140px;
+        width:180px;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        color:white;
+        padding:10px;
+        top:25px;
+        right:-15px;
+        transition-delay:0s;
+        }
+        .ad{
+        display: grid;
+        grid-template-columns:repeat(4,1fr);
+        position:relative;
+        right:15px;
+        }
+        .ic1{
+        display: grid;
+        grid-template-columns:repeat(2,1fr) ;
+        
+        }   
+        .ic2{
+        display: grid; 
+        grid-template-columns:repeat(2,1fr) ;
+       
+        } 
+        .ic3{
+        display: grid;
+        grid-template-columns:repeat(2,1fr) ;
+       
+        }
+        .ic4{
+        display: grid;
+        grid-template-columns:repeat(2,1fr) ; 
+        }
+        .icon{
+         color:orangered;
+         position:relative;
+         left:60px;
+         bottom:-20px;
+        }    
+        .policy{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        background-color: black;
+        width:1460px;
+        margin-left:15px;
+        } 
+        .grid-policy{
+        position:relative;
+        left:60px;
+        padding-left:50px;
+        }  
+        .grid-policy a{
+        text-decoration: none;
+        color: aliceblue;
+        } 
+        .rights{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        }
+        .facebook{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        position:absolute;
+        left:1280px;
+        column-gap:40px;
+        padding:20px;
+        }
+       .product-img{
+       display: flex;
+       flex-direction: column;
+       padding:20px;
+       row-gap:3px;
+       }
+       .img:hover{
+        border-color: azure;
+       }
+       .product-img img{
+        border:1px solid gray;
+       }
+       .product{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       }
+       .star{
+        color:orangered;
+       }
+       .percentage{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       }
+       .percentage button{
+        position:relative;
+        color:white;
+        padding:5px;
+        border-radius:3px;
+        top:60px;
+        left:160px;
+       }
+       .Offer button{
+       border:1px solid gray;
+       border-radius:3px;
+       padding:7px;
+       background-color:black;
+       color: aliceblue;
+       margin:5px;
+       }
+       #addtocart{
+        background-color:orangered;
+        color:azure;
+        border:none;
+        padding:4px 45px 4px 45px;
+        margin:10px;
+        margin-left: 0%;
+       }
+       .product-Main-img{
+        position: relative;
+        right:170px;
+       }
+       .xyz button{
+         position:relative;
+         left: 400px;
+         margin:70px;
+         padding:8px;
+         font-size: large;
+         background-color: black;
+         border:none;
+         color:white;
+        }
+        #btn:hover{
+         background-color:orangered ;
+        }
+        .table{
+        font-family:Arial, Helvetica, sans-serif;
+        height:200px;
+        width:550px;
+        margin-left:10px;
+        }
+        .xy{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        color: darkgray;
+        margin:25px;
+        }
+        .g{
+         border:1px solid darkgray;
+         padding:15px; 
+         margin:15px;
+        }
+        .g button{
+        background-color:orangered;
+        border:none;
+        color: aliceblue;
+        padding:5px;
+        width:300px;
+        }
+        #star{
+        color:orangered;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+            <a href="./homepage.html"class="techshop"><h2 style="font-family:sans-serif;">Tech-Shop</h2></a>
+        </section>
+        <section>
+            <i id="a" class="fa fa-search"><div class="hov">Search</div></i>
+            <a href="./Cart.html"><i id="b" class="fa fa-shopping-cart"><div class="hov1">Cart</div></i></a>
+            <i id="c" class="fa fa-user">
+                <div class="signuphover">
+                    <p><strong>Hello!</strong></p>
+                    <p>Access account and manage orders</p>
+                    <a href="Register.html"><button type="onclick">Login/Signup</button></a><br>
+                    <hr style="color:gray;">
+                    <p>Please Login</p>
+                </div>
+            </i>
+        </section> 
+    </header>  
+    <br><br><br><br><br><br>
+<div class="product">
+    <div class="product-img">
+        <img class="img" src="./images/jbl660nc-1.png"height="120px"width="120px"><br>
+        <img class="img"src="./images/jbl660nc-2.png"height="120px"width="120px"><br>
+        <img class="img"src="./images/jbl660nc-3.png"height="120px"width="120px"><br>
+        <img class="img"src="./images/jbl660nc-4.png"height="120px"width="120px"><br>
+    </div>
+    <div class="product-Main-img">
+        <img src="./images/jbl660nc-1.png"height="600px"width="560px">
+    </div>
+    <div class="product-description">
+        <h1>JBL Live 660NC</h1>
+        <h3>Wireless Over-Ear NC Headphones</h3>
+        <div class="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span style="color:gray"> |</span>
+            <span style="color:gray"> 1234 Ratings</span>
+        </div>
+        <br>
+        <hr width="102%">
+        <div class="percentage">
+            <div>
+                <h1>₹5,999 <span style="font-size:large;"><del> ₹7,999</del></span></h1>
+                <h3 style="color:rgb(13, 205, 13)">You save ₹5000(33%)</h3>
+                <p style="color:gray">(Inclusive of all taxes)</p>
+            </div>
+            <div>
+                <button style="background-color:rgb(13, 205, 13);border:none">&#10003; In Stock</button>
+            </div>
+        </div>
+        <hr width="102%">
+        <div class="Offer">
+            <h3>Offers and Discounts</h3>
+            <button>No Cost EMI on Credit Card</button>
+            <button>PayLater and Avail Cashback</button>
+        </div><br>
+        <hr width="102%">
+        <br>
+        <button id="addtocart">Add to Cart</button>
+    </div>
+</div>
+    <br><br>
+    <div class="xyz">
+    <button id="btn"type="onclick">Specifications</button>
+    <button id="btn"type="onclick">Overview</button>
+    <button id="btn"type="onclick">Reviews</button>
+    </div>
+    <table class="table">
+        <tr>
+            <td>Brand</td>
+            <td style="text-align: end;">JBL</td>
+        </tr>
+        <tr>
+            <td>Model</td>
+            <td style="text-align: end;">JBL Live 660NC</td>
+        </tr>
+        <tr>
+            <td>Generic Name</td>
+            <td style="text-align: end;">Headphones</td>
+        </tr>
+        <tr>
+            <td>Headphone Type</td>
+            <td style="text-align: end;">Over Ear</td>
+        </tr>
+        <tr>
+            <td>Connectivity</td>
+            <td style="text-align: end;">Wireless</td>
+        </tr>
+        <tr>
+            <td>Microphone</td>
+            <td style="text-align: end;">Yes</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <h1 style="text-align: center;">Related Products</h1><br><br>
+    <div class="xy">
+        <div class="g">
+            <img src="./images/jbl760nc-1.png"height="200px"width="250px">
+            <div id="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <h1>JBL Tune 760NC</h1>
+            <h3>Wireless Over-Ear NC Headphones</h3>
+            <hr>
+            <h3>₹5,999 <del>₹7,999</del></h3>
+            <button type="onclick">Add to cart</button>
+        </div>
+        <div class="g">
+            <img src="./images/jbl660nc-1.png"height="200px"width="250px">
+            <div id="star">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            </div>
+            <h1>JBL Live 660NC</h1>
+            <h3>Wireless Over-Ear NC Headphones</h3>
+            <hr>
+            <h3>₹9,999 <del>₹14,999</del></h3>
+            <button type="onclick">Add to cart</button>
+        </div>
+        <div class="g">
+            <img src="./images/boat410-1.png"height="200px"width="250px">
+            <div id="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <h1>boat Rockerz 410</h1>
+            <h4>Bluetooth & Wired On-Ear Headphones</h4>
+            <hr>
+            <h3>₹1,599 <del>₹2,990</del></h3>
+            <button type="onclick">Add to cart</button>
+        </div>
+        <div class="g">
+            <img src="./images/sonyXb910n-1.png"height="200px"width="250px">
+            <div id="star">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <h1>Sony WH-XB910N</h1>
+            <h3>Wireless Over-Ear Headphones</h3>
+            <hr>
+            <h3>₹13,489 <del>₹19,990</del></h3>
+            <button type="onclick">Add to cart</button>
+        </div>
+    </div>
+    <br><br><br><br>
+    <h1 style="text-align: center;">Our Advantages</h1><br><br><br><br>
+    <div class="ad">
+        <div class="ic1">
+            <div class="icon"><i class="fas fa-shipping-fast"style="font-size:70px"></i></div>
+            <div><h2>Express Delivery</h2>
+            <p>Ships in 24 Hours</p></div>
+        </div>
+        <div class="ic2">
+            <div class="icon"><i class="fa-solid fa-shield-halved"style="font-size:70px"></i></div>
+           <div><h2>Brand Warranty</h2>
+            <p>100% Original Products</p></div>
+        </div>
+        <div class="ic3">
+            <div class="icon"><i class="fa-solid fa-tags"style="font-size:70px"></i></div>
+            <div><h2>Exciting Deals</h2>
+            <p>On all prepaid orders</p></div>
+        </div>
+        <div class="ic4">
+            <div class="icon"><i class="fa-solid fa-credit-card"style="font-size:70px"></i></div>
+            <div><h2>Secure Payments</h2>
+            <p>SSL/Secure Certificate</p></div>
+        </div>
+    </div><br><br><br><br>
+    <footer class="policy">
+         <div class="grid-policy">
+            <h1>Tech Shop</h1>
+            <p style="font-size: large;">Subscribe to our Email alerts to receive early discount offers and new products info.</p><br>
+            <input type="text"placeholder="Email Address*"style="background-color:black;border:1px solid darkgray;width:280px;height:30px;"><br><br>
+            <button type="submit"value=Subscribe style="color:aliceblue;background-color:orangered;border:none;padding:4px;">Subscribe</button>
+         </div>
+         <div class="grid-policy">
+                <h1>Help</h1>
+            
+                <a href="">FAQs</a><br><br>
+                <a href="">Track Order</a><br><br>
+                <a href="">Cancel Order</a><br><br>
+                <a href="">Return Order</a><br><br>
+                <a href="">Warranty info</a><br><br>
+            
+         </div>
+         <div class="grid-policy">
+                <h1>Policies</h1>
+            
+                <a href="">Return Policy</a><br><br>
+                <a href="">Security</a><br><br>
+                <a href="">Sitemap</a><br><br>
+                <a href="">Privacy policy</a><br><br>
+                <a href="">Terms&Conditions</a>
+            
+         </div>
+         <div class="grid-policy">
+                <h1>Company</h1>
+            
+                <a href="">About Us</a><br><br>
+                <a href="">Contact Us</a><br><br>
+                <a href="">Services Centres</a><br><br>
+                <a href="">Careers</a><br><br>
+                <a href="">Affiliates</a>
+            
+         </div>
+        </footer>
+    <hr width="105%">
+    <div class="rights">
+        <div><p>2024|All Rights Reserved.Built by|<b style="color:bisque;font-family:sans-serif"> Tarun</b></p></div>
+        <div class="facebook">
+           <div><i class="fab fa-facebook-f"></i></div>
+           <div><i class="fa-brands fa-twitter"></i></div>
+           <div><i class="fa-brands fa-instagram"></i></div>
+           <div><i class="fa-brands fa-linkedin"></i></div>
+        </div>
+    </div>     
+</body>
+</html>

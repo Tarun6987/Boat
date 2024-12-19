@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup</title>
+    <script src="https://kit.fontawesome.com/1e086755ed.js"crossorigin="anonymous"></script>
+    <style>
+        .techshop{
+        text-decoration:none;
+        color:white;
+        }
+        .table{
+        height:3px;
+        width:100px;
+        background-color:darkslategray;
+        color:white;
+        border-radius:2px;
+        text-align: center;
+        padding:2px;
+        }
+        .cart{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        width:100%;
+        }
+        div i{
+        position:relative;
+        left:250px;
+        top:30px;
+        }
+        .policy{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        width:1460px;
+        margin-left:15px;
+        } 
+        .grid-policy{
+        position:relative;
+        left:30px;
+        top:180px;
+        padding-left:80px;
+        padding-bottom:20px;
+        }  
+        .grid-policy a{
+        text-decoration: none;
+        color: aliceblue;
+        } 
+        .rights{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        position: relative;
+        top:160px;
+        left:0px;
+        }
+        .facebook{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        position:absolute;
+        left:1040px;
+        bottom:30px;
+        column-gap:40px;
+        padding:20px;
+        }
+        body{
+        background-color:#101010;
+        color: aliceblue; 
+        overflow-x:hidden;
+        }
+        header{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        height:100px;
+        width:100%;
+        position:fixed;
+        top:0px;
+        left:0px;
+        background-color: black;
+        }
+        .a button{
+        background-color: orangered;
+        color: aliceblue;
+        border:none ;
+        padding:5px ;
+        }
+        #a{
+        position:absolute;
+        top:40px;
+        left:1320px;
+        color:aliceblue;
+        }
+        .hov{
+        position:absolute;
+        visibility:hidden;
+        }
+        #a:hover .hov{
+        visibility: visible;
+        border: 1px solid white;
+        border-radius:4px;
+        background-color: black;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        color:white;
+        padding:5px;
+        top:25px;
+        right:-20px;
+        }
+        #b{
+        position:absolute;
+        top:40px;
+        left:1400px;
+        color: aliceblue;
+        }
+        .hov1{
+        position:absolute;
+        visibility:hidden;
+        }
+        #b:hover .hov1{
+        visibility: visible;
+        border: 1px solid white;
+        border-radius:4px;
+        background-color: black;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        color:white;
+        padding:4px;
+        top:25px;
+        right:-15px;
+        }
+        .signuphover button{
+        background-color: black;
+        border:1px solid white;
+        border-radius:5px;
+        color: aliceblue;
+        padding:5px;
+        }
+        #c{
+        position: absolute;
+        top:40px;
+        left:1480px ;
+        color: aliceblue;
+        }
+        .signuphover{
+        position:absolute;
+        visibility:hidden;
+        transition:all 0s ease 1s;
+        border: 1px solid white;
+        background-color:black;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        height:140px;
+        width:180px;
+        color:white;
+        padding:10px;
+        top:25px;
+        right:-15px;
+        }
+        #c:hover .signuphover{
+        visibility:visible;
+        border: 1px solid white;
+        background-color: black;
+        font-family:'Times New Roman', Times, serif;
+        font-size:smaller;
+        height:140px;
+        width:180px;
+        color:white;
+        padding:10px;
+        top:25px;
+        right:-15px;
+        transition-delay:0s;
+        }
+        .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        color: aliceblue;
+        padding:20px;
+        }
+        .hr{
+        position: relative;
+        top:160px;
+        left:0px;
+        }
+        .hr1{
+        position:absolute;
+        top:220px;
+        }
+       .form{
+        color:white;
+        background-color:black;
+        border:1px solid gray;
+        height:550px;
+        width:400px;
+        text-align: center;
+        align-content: center;
+        border:1px solid gray ;
+        padding:5px;
+       }
+       .form button{
+        border:none;
+        margin:10px;
+        color: aliceblue;
+       }
+       .form input{
+        height:27px;
+        width: 300px;
+        background-color: black;
+        color: aliceblue;
+        border:1px solid gray;
+       } 
+       #form{
+        position: relative;
+        top:150px;
+        left:550px;
+       }
+       #form1{
+        display: none;
+       }
+       .a{
+        position: relative;
+        left:-105px;
+       }
+       .b{
+        position: relative;
+        left:-52px;
+       }
+       #timesicon{
+       position:absolute;
+       color:aliceblue;
+       font-size: large;
+       top:20px;
+       left:370px;
+       }
+       #input:hover{
+       border-color:azure;
+       }
+       #timesbtn{
+        display:none
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <section>
+            <a href="./Project.html"class="techshop"><h2 style="font-family:sans-serif;">Tech-Shop</h2></a>
+        </section>
+        <section>
+            <i id="a" class="fa fa-search"><div class="hov">Search</div></i>
+            <a href="./cart.html"><i id="b" class="fa fa-shopping-cart"data-tooltip="Cart"><div class="hov1">Cart</div></i></a>
+            <i id="c" class="fa fa-user">
+                <div class="signuphover">
+                    <p><strong>Hello!</strong></p>
+                    <p>Access account and manage orders</p>
+                    <!-- <a href="signup.html"> -->
+                    <button onclick="openform()">Login/Signup</button>
+                    <!-- </a> -->
+                    <hr style="color:gray;">
+                    <p>Please Login</p>
+                </div>
+            </i>
+        </section>
+    </header>   
+    <div id="form">
+    <form id='form1'class="form"action="#"method="$POST"enctype="multipart/form-data">
+        <a href="" onclick="closeform()"><i id=timesicon class="fa fa-times"></i></a>
+        <h1 class="a">Signup</h1>
+        <p class="b">Already have an account?<b>Login</b></p><br>
+        <input id="input"type="text"placeholder="Username"><br><br>
+        <input id="input"type="email"placeholder="Email"><br><br>
+        <input id="input"type="password"placeholder="Password"><br><br>
+        <input id="input"type="password"placeholder="Confirm Password"><br><br>
+        <button type="Submit"style="background-color:orangered;color:aliceblue;height:28px;width:302px">Signup</button><br>
+        <p>or login with</p>
+        <button style="background-color:blue;height:25px;width:100px">Facebook</button>
+        <button style="background-color:orangered;height:25px;width:100px">Google</button>
+        <button style="background-color:dodgerblue;height:25px;width:100px">Twitter</button>
+    </form>
+    </div>
+    <footer class="policy">
+        <div class="grid-policy">
+           <h1>Tech Shop</h1>
+           <p style="font-size: large;">Subscribe to our Email alerts to receive early discount offers and new products info.</p><br>
+           <input type="text"placeholder="Email Address*"style="background-color:black;border:1px solid darkgray;width:280px;height:30px;"><br><br>
+           <button type="submit"value=Subscribe style="color:aliceblue;background-color:orangered;border:none;padding:4px;">Subscribe</button>
+        </div>
+        <div class="grid-policy">
+               <h1>Help</h1>
+           
+               <a href="">FAQs</a><br><br>
+               <a href="">Track</a><br><br>
+               <a href="">Cancel</a><br><br>
+               <a href="">Return</a><br><br>
+               <a href="">Warranty</a><br><br>
+           
+        </div>
+        <div class="grid-policy">
+               <h1>Policies</h1>
+           
+               <a href="">Return Policy</a><br><br>
+               <a href="">Security</a><br><br>
+               <a href="">Sitemap</a><br><br>
+               <a href="">Privacy policy</a><br><br>
+               <a href="">Terms&Conditions</a>
+           
+        </div>
+        <div class="grid-policy">
+               <h1>Company</h1>
+           
+               <a href="">About Us</a><br><br>
+               <a href="">Contact Us</a><br><br>
+               <a href="">Services Centres</a><br><br>
+               <a href="">Careers</a><br><br>
+               <a href="">Affiliates</a>
+          
+        </div>
+       </footer>
+       <hr class="hr"width="154%">
+    <div class="rights">
+        
+       <div><p>2024|All Rights Reserved.Built by|<b style="color:bisque;font-family:sans-serif"> Tarun</b></p></div>
+       <div class="facebook">
+          <div><i class="fab fa-facebook-f"></i></div>
+          <div><i class="fa-brands fa-twitter"></i></div>
+          <div><i class="fa-brands fa-instagram"></i></div>
+          <div><i class="fa-brands fa-linkedin"></i></div>
+       </div>
+    </div>
+    <script>
+function openform(){
+    document.getElementById('form1').style.display='block'
+}
+function closeform(){
+    document.getElementById('form1').style.display='none'
+}  
+    </script>             
+</body>
+</html>
